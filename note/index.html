@@ -13,7 +13,7 @@
     4. 大量创建对象
   </p>
   <p>
-    egret对于子对象会频繁变化的容器,不要使用布局类,手写方法 + 配置文件控制布局.\n
+    egret对于子对象会频繁变化的容器,不要使用布局类,手写方法 + 配置文件控制布局.<br>
     网络有波动会导致突然收到大量服务器消息,此时对于显示对象的增删,动画的播放需要有异常判断.
   </p>
   <p>
@@ -26,15 +26,15 @@
 	移除80端口号：firewall-cmd --permanent --zone=public --remove-port=80/tcp
 	</p>
 	<p>
-	systemctl status firewalld.service\n
-	启动|关闭|重新启动  防火墙\n
-	systemctl [start|stop|restart] firewalld.service \n
+	systemctl status firewalld.service<br>
+	启动|关闭|重新启动  防火墙<br>
+	systemctl [start|stop|restart] firewalld.service <br>
 	</p>
 	<p>
-		egret异步操作,可以利用Promise和setTimeout封装一个函数F,此函数F具备以下几个功能:\n
-		1.返回一个Promise\n
-		2.此Promise可以被立即resolve/reject\n
-		3.setTimeout可以被清除\n
+		egret异步操作,可以利用Promise和setTimeout封装一个函数F,此函数F具备以下几个功能:<br>
+		1.返回一个Promise<br>
+		2.此Promise可以被立即resolve/reject<br>
+		3.setTimeout可以被清除<br>
 		然后使用异步函数async实现异步操作,这样异步操作里的每一个动作都可以被严格控制
 	</p>
 </body>
