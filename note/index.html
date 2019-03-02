@@ -23,13 +23,20 @@
     永久开放80端口号：firewall-cmd --permanent --zone=public --add-port=80/tcp
   </p>
   <p>
-    移除80端口号：firewall-cmd --permanent --zone=public --remove-port=80/tcp
-  </p>
-  <p>
-    systemctl status firewalld.service\n
-    启动|关闭|重新启动  防火墙\n
-    systemctl [start|stop|restart] firewalld.service \n
-  </p>
+	移除80端口号：firewall-cmd --permanent --zone=public --remove-port=80/tcp
+	</p>
+	<p>
+	systemctl status firewalld.service\n
+	启动|关闭|重新启动  防火墙\n
+	systemctl [start|stop|restart] firewalld.service \n
+	</p>
+	<p>
+		egret异步操作,可以利用Promise和setTimeout封装一个函数F,此函数F具备以下几个功能:\n
+		1.返回一个Promise\n
+		2.此Promise可以被立即resolve/reject\n
+		3.setTimeout可以被清除\n
+		然后使用异步函数async实现异步操作,这样异步操作里的每一个动作都可以被严格控制
+	</p>
 </body>
 </html>
 
