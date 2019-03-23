@@ -1,0 +1,127 @@
+body{
+  margin: 0;
+  font-size: 0;
+  background-color: #86d9fb;
+}
+main,div,nav,p,span{
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+main{
+  width: 640px;height: 520px;
+  border-top: 1px solid transparent;
+  background-color:#000;
+  margin: 75px 0 0 210px;
+  overflow: hidden;
+  position: relative;
+}
+.index{
+  height: 40px;width: 170px;line-height: 40px;
+  margin: 210px 0 0 230px;
+  background-color: #CCC;
+  border-radius:20px;
+  overflow: hidden;
+  font-family:"SimHei";
+  font-size: 32px;
+}
+.commandTutorial{
+  display: inline-block;
+  height: 100%;width: 50%;
+  text-align: center;
+  color: #D35400;
+}
+.startButton{
+  display: inline-block;
+  height: 100%;width: 50%;
+  text-align: center;
+  color: #C0392B;
+}
+/*    */
+.player1Tutorial{
+  width: 115px;
+  position: absolute;
+  top: 120px;
+  left: 50px;
+}
+.commands{
+  height: 40px; line-height: 40px;
+  margin: 20px 0;
+  font-family: "KaiTi";
+}
+.player1,.activityTutorial{
+  font-size: 30px;
+  color: #00bf4c;
+}
+.keyTutorial{
+  margin-left: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+#author{
+  height: 70px;
+  margin: 100px 0 0 300px;
+  padding: 25px 0 0 0;
+  color: #fff;
+  font-family: "KaiTi";
+  font-size: 20px;
+  background: padding-box  30px 0 no-repeat url(img/8MileW.png) transparent;
+}
+/*    */
+#map{
+  width: 520px;height: 520px;
+  margin-top: -1px;
+  background-color: #000;
+  position: relative;
+
+}
+.brick{
+  display: inline-block;
+  width: 20px;height: 20px;
+  background:border-box left top no-repeat;
+}
+#base{
+  display: inline-block;
+  width: 40px;height: 40px;
+  position: absolute;
+  top: 480px;left: 240px;
+  background: border-box left top no-repeat url(img/base.png);
+}
+/*    */
+.tank {
+  display: inline-block;
+  width: 40px;height: 40px;
+  position: absolute;
+}
+.bulletT{
+  display: inline-block;;
+  width: 40px;height:4px;
+  position: absolute;
+  background: border-box center no-repeat url(img/bulletT.png) ;
+}
+.bulletL{
+  display: inline-block;
+  width: 4px;height: 40px;
+  position: absolute;
+  background: border-box center no-repeat url(img/bulletL.png);
+}
+.bulletB{
+  display: inline-block;
+  width: 40px;height: 4px;
+  position: absolute;
+  background: border-box center no-repeat url(img/bulletB.png);
+}
+.bulletR{
+  display: inline-block;
+  width: 4px;height: 40px;
+  position: absolute;
+  background: border-box center no-repeat url(img/bulletR.png);
+}
+.endGame{
+  display: inline-block;
+  position: absolute;
+  width: 260px;height: 140px;
+  background: border-box center no-repeat;
+}
