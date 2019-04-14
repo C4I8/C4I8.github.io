@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TCP协议与Socket</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheet/common_style.css">
+	<link rel="stylesheet" type="text/css" href="/blog/2019_04_14/2019_04_14_main.css">
+</head>
+<body>
+	<div id="home">
+		<div id="header">
+			
+		</div>
+		<div id="out_content">
+			<div id="content">
+				<h2 id='title'>TCP协议与Socket</h2>
+				<p class="content_p_1">
+					TCP协议在OSI模型中负责数据的可靠传输,而Socket则是对TCP协议的抽象接口,负责建立起从服务器地址A(0.0.0.0)端口P_s(:xxxx)到客户端B(0.0.0.0)端口P_c(:yyyy)的连接.下面是用nodejs搭建的例子:
+				</p>
+				<p class="content_p_1">
+					服务端代码:<br/>
+				</p>
+				<pre class="content_pre_1">
+
+	const net = require('net');
+	const address = '127.0.0.1';
+	const port = 8000;
+	var socketServer = net.createServer();
+	socketServer.on('connection',function(socket){
+		console.log('客户端创建连接:' + client.remoteAddress + ':'+client.remotePort);	
+	});
+	socketServer.listen(port,address,function(){
+		console.log(`TCP listen on ${address}:${port}`);
+	});
+				</pre>
+				<p class="content_p_1">
+					服务端代码:
+				</p>
+				<pre class="content_pre_1">
+
+	const net = require('net');
+	const address = '127.0.0.1';
+	const port = 8000;
+	net.createConnection(port,address,function(){
+		console.log('连接到服务器');
+	});
+	net.createConnection(port,address,function(){
+		console.log('连接到服务器');
+	});
+				</pre>
+				<p class="content_p_1" style="margin-top: 20px">运行可以看到,服务端打印消息:</p>
+				<pre class="content_pre_1">
+
+	TCP listen on 127.0.0.1:8000
+	客户端创建连接:127.0.0.1:49551
+	客户端创建连接:127.0.0.1:49552
+				</pre>
+				<p class="content_p_1">客户端打印消息:</p>
+				<pre class="content_pre_1">
+					
+	连接到服务器
+	连接到服务器
+				</pre>
+				<p class="content_p_1">由此可见,服务端对127.0.0.1:8000进行TCP服务监听,而客户端创建了两个Socket,并向服务端发起请求,建立两个Socket连接.即</br>127.0.0.1:8000--127.0.0.1:49551和127.0.0.1:8000--127.0.0.1:49552</p>
+			</div>
+			<div id="footer">
+				
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/script/jquery.js"></script>
+	<script type="text/javascript" src="/blog/2019_04_14/2019_04_14_main.js" onload="start()"></script>
+</body>
+</html>
